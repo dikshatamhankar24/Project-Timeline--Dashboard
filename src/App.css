@@ -1,0 +1,65 @@
+/* src/app.css */
+/* app.css */
+body { -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+
+button:focus { outline: none; box-shadow: 0 0 0 3px rgba(59,130,246,0.12); border-radius: 8px; }
+
+
+/* Ensure app container fills viewport */
+#root, .app-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f9fafb; /* Light neutral background */
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Header styles */
+.app-header {
+  padding: 1rem 2rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2563eb; /* Tailwind blue-600 */
+  border-bottom: 1px solid #e5e7eb; /* Tailwind gray-200 */
+}
+
+/* Main content area - Timeline view */
+.main-content {
+  flex: 1;
+  padding: 1rem 2rem;
+  overflow: hidden;
+  display: flex;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+}
+
+/* Scroll styling for horizontal timeline scrolling */
+.timeline-scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Customize scrollbar appearance */
+.timeline-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.timeline-scroll-container::-webkit-scrollbar-thumb {
+  background: #3b82f6; /* Tailwind blue-500 */
+  border-radius: 8px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .app-header {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  .main-content {
+    padding: 1rem;
+  }
+}
